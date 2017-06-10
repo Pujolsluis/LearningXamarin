@@ -20,6 +20,8 @@ namespace StringColorProcessor
         {
             InitializeComponent();
 
+            textLabel.FontSize = 24;
+
             //Main Stacklayout with default orientation vertical
             var mainLayout = new StackLayout
             {
