@@ -78,30 +78,32 @@ namespace StringColorProcessor
             mainLayout.Children.Add(secondaryLayout);
             mainLayout.Children.Add(textLabel);
 
-            buttonRed.Clicked += Button_Clicked;
-            buttonBlue.Clicked += Button_Clicked;
-            buttonGreen.Clicked += Button_Clicked;
+            buttonRed.Clicked += Button_ClickedAsync;
+            buttonBlue.Clicked += Button_ClickedAsync;
+            buttonGreen.Clicked += Button_ClickedAsync;
 
             this.Content = mainLayout;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_ClickedAsync(object sender, EventArgs e)
         {
-            Button tempButton = (Button) sender;
-            if(tempButton.BackgroundColor == Color.Red)
+            Button tempButton = (Button)sender;
+            if (tempButton.BackgroundColor == Color.Red)
             {
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Red;
-            }else if(tempButton.BackgroundColor == Color.Blue)
+            }
+            else if (tempButton.BackgroundColor == Color.Blue)
             {
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Blue;
             }
-            else if(tempButton.BackgroundColor == Color.Green)
+            else if (tempButton.BackgroundColor == Color.Green)
             {
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Green;
             }
+            await this.Navigation.PushAsync(new ColoredPage());
         }
     }
 }
