@@ -85,25 +85,32 @@ namespace StringColorProcessor
             this.Content = mainLayout;
         }
 
+        //Async method to create a new page when any button is clicked
         private async void Button_ClickedAsync(object sender, EventArgs e)
         {
             Button tempButton = (Button)sender;
             if (tempButton.BackgroundColor == Color.Red)
             {
+                /* Part 1 simple color processor app.
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Red;
+                */
                 await this.Navigation.PushAsync(new ColoredPage(textEntry.Text, Color.Red));
             }
             else if (tempButton.BackgroundColor == Color.Blue)
             {
+                /* Part 1 simple color processor app.
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Blue;
+                */
                 await this.Navigation.PushAsync(new ColoredPage(textEntry.Text, Color.Blue));
             }
             else if (tempButton.BackgroundColor == Color.Green)
             {
+                /* Part 1 simple color processor app.
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Green;
+                */
                 await this.Navigation.PushAsync(new ColoredPage(textEntry.Text, Color.Green));
             }
             

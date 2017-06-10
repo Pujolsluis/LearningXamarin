@@ -16,17 +16,20 @@ namespace StringColorProcessor
         {
             InitializeComponent();
 
+            //Base layout for the colored background
             var baseLayout = new ContentView
             {
                 BackgroundColor = bgColor
             };
 
+            //StackLayout for the centered text
             var stackLayout = new StackLayout
             {
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
             };
 
+            //Label with the entry text
             var label = new Label
             {
                 Text = entryText,
