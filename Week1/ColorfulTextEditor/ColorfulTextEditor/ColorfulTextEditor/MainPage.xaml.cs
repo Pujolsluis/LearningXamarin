@@ -9,8 +9,22 @@ namespace ColorfulTextEditor
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        Label labelOutput = new Label();
+        FormattedString fs = new FormattedString();
+        Entry entryText = new Entry
         {
+            Placeholder = "Input a text",
+            HorizontalOptions = LayoutOptions.FillAndExpand
+        };
+        Picker sizePicker = new Picker
+        {
+            Title = "Choose a Size",
+            HorizontalOptions = LayoutOptions.FillAndExpand
+        };
+
+
+        public MainPage()
+        {        
             InitializeComponent();
             var mainStackLayout = new StackLayout
             {
@@ -47,12 +61,6 @@ namespace ColorfulTextEditor
                 FontSize = 24
             };
 
-            var entryText = new Entry
-            {
-                Placeholder = "Input a text",
-                HorizontalOptions = LayoutOptions.FillAndExpand
-            };
-
             firstStackLayout.Children.Add(labelText);
             firstStackLayout.Children.Add(entryText);
 
@@ -60,12 +68,6 @@ namespace ColorfulTextEditor
             {
                 Text = "Size",
                 FontSize = 24
-            };
-
-            var sizePicker = new Picker
-            {
-               Title = "Choose a Size",
-               HorizontalOptions = LayoutOptions.FillAndExpand
             };
 
             sizePicker.Items.Add("Small");
@@ -96,17 +98,43 @@ namespace ColorfulTextEditor
                 HorizontalOptions = LayoutOptions.FillAndExpand
             };
 
+            redButton.Clicked += Button_Clicked;
+            blueButton.Clicked += Button_Clicked;
+            greenButton.Clicked += Button_Clicked;
+
             thirdStackLayout.Children.Add(redButton);
             thirdStackLayout.Children.Add(blueButton);
             thirdStackLayout.Children.Add(greenButton);
 
-            var labelOutput = new Label();
 
             mainStackLayout.Children.Add(firstStackLayout);
             mainStackLayout.Children.Add(secondStackLayout);
             mainStackLayout.Children.Add(thirdStackLayout);
             mainStackLayout.Children.Add(labelOutput);
             this.Content = mainStackLayout;
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            var tempButton = (Button)sender;
+
+            switch (sizePicker.SelectedIndex)
+            {
+                case 0:
+                    fs.Spans.Add(new Span { Text = entryText.Text, ForegroundColor = tempButton.BackgroundColor, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) });
+                    break;
+                case 1:
+                    fs.Spans.Add(new Span { Text = entryText.Text, ForegroundColor = tempButton.BackgroundColor, FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) });
+                    break;
+                case 2:
+                    fs.Spans.Add(new Span { Text = entryText.Text, ForegroundColor = tempButton.BackgroundColor, FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)) });
+                    break;
+                default:
+                    fs.Spans.Add(new Span { Text = entryText.Text, ForegroundColor = tempButton.BackgroundColor, FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label)) });
+                    break;
+            }
+
+            labelOutput.FormattedText = fs;
         }
     }
 }
