@@ -92,18 +92,21 @@ namespace StringColorProcessor
             {
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Red;
+                await this.Navigation.PushAsync(new ColoredPage(textEntry.Text, Color.Red));
             }
             else if (tempButton.BackgroundColor == Color.Blue)
             {
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Blue;
+                await this.Navigation.PushAsync(new ColoredPage(textEntry.Text, Color.Blue));
             }
             else if (tempButton.BackgroundColor == Color.Green)
             {
                 textLabel.Text = textEntry.Text;
                 textLabel.TextColor = Color.Green;
+                await this.Navigation.PushAsync(new ColoredPage(textEntry.Text, Color.Green));
             }
-            await this.Navigation.PushAsync(new ColoredPage());
+            
         }
     }
 }

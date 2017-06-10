@@ -12,9 +12,32 @@ namespace StringColorProcessor
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ColoredPage : ContentPage
     {
-        public ColoredPage()
+        public ColoredPage(string entryText, Color bgColor)
         {
             InitializeComponent();
+
+            var baseLayout = new ContentView
+            {
+                BackgroundColor = bgColor
+            };
+
+            var stackLayout = new StackLayout
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+            };
+
+            var label = new Label
+            {
+                Text = entryText,
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                TextColor = Color.White
+            };
+
+            stackLayout.Children.Add(label);
+            baseLayout.Content = stackLayout;
+            this.Content = baseLayout;
+            
         }
     }
 }
