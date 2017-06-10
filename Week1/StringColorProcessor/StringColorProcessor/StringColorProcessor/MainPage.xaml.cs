@@ -23,7 +23,8 @@ namespace StringColorProcessor
             //Main Stacklayout with default orientation vertical
             var mainLayout = new StackLayout
             {
-                VerticalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.Center,
+                Padding = 16
             };
 
             //Text Entry
@@ -32,24 +33,28 @@ namespace StringColorProcessor
             // Creating the secondary Stacklayout and assigning its correct orientation
             var secondaryLayout = new StackLayout
             {
-                Orientation = StackOrientation.Horizontal
+                Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.CenterAndExpand
             };
 
             //Creating buttons 
             var buttonRed = new Button
             {
                 Text = "Red",
-                BackgroundColor = Color.Red
+                BackgroundColor = Color.Red,
+                TextColor = Color.White,
             };
             var buttonBlue = new Button
             {
                 Text = "Blue",
-                BackgroundColor = Color.Blue
+                BackgroundColor = Color.Blue,
+                TextColor = Color.White
             };
             var buttonGreen = new Button
             {
                 Text = "Black",
-                BackgroundColor = Color.Green
+                BackgroundColor = Color.Green,
+                TextColor = Color.White
             };
 
             //Adding the buttons to the secondary layout
