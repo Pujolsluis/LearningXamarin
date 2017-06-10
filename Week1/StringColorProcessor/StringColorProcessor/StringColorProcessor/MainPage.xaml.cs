@@ -29,12 +29,15 @@ namespace StringColorProcessor
 
             //Text Entry
             textEntry.Placeholder = "Input a text";
+            textEntry.Keyboard = Keyboard.Create(KeyboardFlags.All);
 
             // Creating the secondary Stacklayout and assigning its correct orientation
             var secondaryLayout = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
+                HeightRequest = 72
             };
 
             //Creating buttons 
@@ -43,18 +46,24 @@ namespace StringColorProcessor
                 Text = "Red",
                 BackgroundColor = Color.Red,
                 TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand
             };
             var buttonBlue = new Button
             {
                 Text = "Blue",
                 BackgroundColor = Color.Blue,
-                TextColor = Color.White
+                TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand
             };
             var buttonGreen = new Button
             {
                 Text = "Black",
                 BackgroundColor = Color.Green,
-                TextColor = Color.White
+                TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand
             };
 
             //Adding the buttons to the secondary layout
