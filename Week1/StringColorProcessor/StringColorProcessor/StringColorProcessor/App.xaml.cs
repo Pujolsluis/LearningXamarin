@@ -13,7 +13,7 @@ namespace StringColorProcessor
         {
             InitializeComponent();
 
-            MainPage = new StringColorProcessor.MainPage();
+            MainPage = new NavigationPage( new StringColorProcessor.MainPage());
         }
 
         protected override void OnStart()
