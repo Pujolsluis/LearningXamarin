@@ -4,20 +4,20 @@
              xmlns:local="clr-namespace:OnsiteProject1"
              x:Class="OnsiteProject1.MainPage">
 
-    <StackLayout HorizontalOptions="FillAndExpand" Padding="16,24,16,16">
+    <StackLayout HorizontalOptions="FillAndExpand" Padding="16,32,16,16">
         <Image WidthRequest="100" HeightRequest="100" HorizontalOptions="Center">
-        <FileImageSource>
+        <Image.Source>
             <OnPlatform x:TypeArguments="ImageSource">
-                <OnPlatform.iOS>androidlogo.png</OnPlatform.iOS>
-                <OnPlatform.Android>ioslogo.png</OnPlatform.Android>
+                <OnPlatform.iOS>ioslogo.png</OnPlatform.iOS>
+                <OnPlatform.Android>androidlogo.png</OnPlatform.Android>
             </OnPlatform>
-        </FileImageSource>
+        </Image.Source>
         </Image>
         <Label Text="User" HorizontalOptions="FillAndExpand"/>
         <Entry HorizontalOptions="FillAndExpand"/>
         <Label Text="Password"/>
         <Entry HorizontalOptions="FillAndExpand"/>
-        <Button Text="Login" HorizontalOptions="FillAndExpand"/>
+        <Button Text="Login" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}" Margin="0,16,0,0"/>
     </StackLayout>
 
 </ContentPage>

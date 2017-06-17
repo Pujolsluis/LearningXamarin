@@ -13,7 +13,8 @@ namespace OnsiteProject1
         {
             InitializeComponent();
 
-            MainPage = new OnsiteProject1.MainPage();
+            //MainPage = new OnsiteProject1.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
