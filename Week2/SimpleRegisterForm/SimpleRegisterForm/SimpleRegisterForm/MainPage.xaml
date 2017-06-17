@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SimpleRegisterForm"
+             x:Class="SimpleRegisterForm.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="16,16,16,16">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Entry Placeholder="First Name" HorizontalOptions="FillAndExpand"/>
+            <Entry Placeholder="Last Name" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Entry Placeholder="Email" Keyboard="Email" HorizontalOptions="FillAndExpand"/>
+        <Entry Placeholder="Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+        <Entry Placeholder="Confirm Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+        <Label Text="Tell us About you" HorizontalOptions="FillAndExpand"/>
+        <Editor WidthRequest="140" HeightRequest="140" HorizontalOptions="FillAndExpand"/>
+
+    </StackLayout>
+
+</ContentPage>
