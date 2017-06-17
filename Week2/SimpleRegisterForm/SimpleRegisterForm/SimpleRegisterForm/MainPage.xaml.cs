@@ -12,6 +12,7 @@ namespace SimpleRegisterForm
         public MainPage()
         {
             InitializeComponent();
+            this.Title = "Register";
         }
     }
 }
