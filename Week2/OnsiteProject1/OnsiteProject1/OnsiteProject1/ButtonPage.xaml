@@ -4,7 +4,7 @@
              x:Class="OnsiteProject1.ButtonPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="16,32,16,16">
-            <Image WidthRequest="100" HeightRequest="100" HorizontalOptions="Center">
+            <Image x:Name="platformLogo" WidthRequest="100" HeightRequest="100" HorizontalOptions="Center">
                 <Image.Source>
                     <OnPlatform x:TypeArguments="ImageSource">
                         <OnPlatform.iOS>ioslogo.png</OnPlatform.iOS>
@@ -13,9 +13,9 @@
                 </Image.Source>
             </Image>
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
-                <Button Text="Small" Style="{StaticResource buttonStyle}"/>
-                <Button Text="Medium" Style="{StaticResource buttonStyle}"/>
-                <Button Text="Large" Style="{StaticResource buttonStyle}"/>
+                <Button Text="Small" Style="{StaticResource buttonStyle}" Clicked="Button_Clicked"/>
+                <Button Text="Medium" Style="{StaticResource buttonStyle}" Clicked="Button_Clicked"/>
+                <Button Text="Large" Style="{StaticResource buttonStyle}" Clicked="Button_Clicked"/>
             </StackLayout>
         </StackLayout>
         
