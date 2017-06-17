@@ -12,9 +12,13 @@
         <Entry Placeholder="Email" Keyboard="Email" HorizontalOptions="FillAndExpand"/>
         <Entry Placeholder="Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
         <Entry Placeholder="Confirm Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
-        <Label Text="Tell us About you" HorizontalOptions="FillAndExpand"/>
-        <Editor WidthRequest="140" HeightRequest="140" HorizontalOptions="FillAndExpand"/>
-
+        <Label Text="Tell us About you" HorizontalOptions="FillAndExpand" TextColor="Black" FontSize="Medium"/>
+        <Editor WidthRequest="140" HeightRequest="140" HorizontalOptions="FillAndExpand" BackgroundColor="Black" TextColor="WhiteSmoke"/>
+        <StackLayout Orientation="Horizontal" Margin="0,8,0,0">
+            <Switch IsToggled="False"/>
+            <Label Text="Accept terms and conditions"/>
+        </StackLayout>
+        <Button Text="Create Account" VerticalOptions="EndAndExpand" BackgroundColor="Black" TextColor="White"/>
     </StackLayout>
 
 </ContentPage>

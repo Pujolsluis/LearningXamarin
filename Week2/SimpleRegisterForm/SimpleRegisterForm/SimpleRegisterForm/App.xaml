@@ -5,6 +5,10 @@
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
-
+        <ResourceDictionary>
+            <Style x:Name="textInputStyle" TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+        </ResourceDictionary>
 	</Application.Resources>
 </Application>
