@@ -19,7 +19,7 @@
             <Switch IsToggled="{Binding acceptedTerms}"/>
             <Label Text="Accept terms and conditions"/>
         </StackLayout>
-        <Button Text="Create Account" VerticalOptions="EndAndExpand" BackgroundColor="Black" TextColor="White"/>
+        <Button Text="Create Account" VerticalOptions="EndAndExpand" BackgroundColor="Black" TextColor="White" Command="{Binding signUp}" />
     </StackLayout>
 
 </ContentPage>
