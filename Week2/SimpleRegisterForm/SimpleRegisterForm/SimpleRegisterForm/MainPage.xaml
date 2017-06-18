@@ -6,16 +6,17 @@
 
     <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="16,16,16,16">
         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <Entry Placeholder="First Name" HorizontalOptions="FillAndExpand"/>
-            <Entry Placeholder="Last Name" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding firstName}"  Placeholder="First Name" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding lastName}" Placeholder="Last Name" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
-        <Entry Placeholder="Email" Keyboard="Email" HorizontalOptions="FillAndExpand"/>
-        <Entry Placeholder="Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
-        <Entry Placeholder="Confirm Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+
+        <Entry Text="{Binding email}" Placeholder="Email" Keyboard="Email" HorizontalOptions="FillAndExpand"/>
+        <Entry Text="{Binding password}" Placeholder="Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+        <Entry Text="{Binding confirmPassword}" Placeholder="Confirm Password" IsPassword="true" HorizontalOptions="FillAndExpand"/>
         <Label Text="Tell us About you" HorizontalOptions="FillAndExpand" TextColor="Black" FontSize="Medium"/>
-        <Editor WidthRequest="140" HeightRequest="140" HorizontalOptions="FillAndExpand" BackgroundColor="Black" TextColor="WhiteSmoke"/>
+        <Editor Text="{Binding description}" WidthRequest="140" HeightRequest="140" HorizontalOptions="FillAndExpand" BackgroundColor="Black" TextColor="WhiteSmoke"/>
         <StackLayout Orientation="Horizontal" Margin="0,8,0,0">
-            <Switch IsToggled="False"/>
+            <Switch IsToggled="{Binding acceptedTerms}"/>
             <Label Text="Accept terms and conditions"/>
         </StackLayout>
         <Button Text="Create Account" VerticalOptions="EndAndExpand" BackgroundColor="Black" TextColor="White"/>

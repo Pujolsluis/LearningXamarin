@@ -12,6 +12,7 @@ namespace SimpleRegisterForm.ViewModels
         public User newUser { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
+        public string email { get; set; }
         public string password { get; set; }
         public string confirmPassword { get; set; }
         public string description { get; set; }
@@ -23,6 +24,7 @@ namespace SimpleRegisterForm.ViewModels
             firstName = newUser.FirstName;
             lastName = newUser.LastName;
             password = newUser.Password;
+            email = newUser.Email;
             confirmPassword = newUser.Password;
             description = newUser.Description;
             acceptedTerms = newUser.AcceptedTerms;

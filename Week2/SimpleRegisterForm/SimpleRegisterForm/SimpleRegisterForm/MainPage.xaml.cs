@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleRegisterForm.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace SimpleRegisterForm
         {
             InitializeComponent();
             this.Title = "Register";
+            BindingContext = new RegistrarionViewModel();
         }
     }
 }
