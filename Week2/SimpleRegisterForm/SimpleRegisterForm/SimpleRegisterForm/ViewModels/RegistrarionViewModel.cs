@@ -24,8 +24,8 @@ namespace SimpleRegisterForm.ViewModels
         public RegistrarionViewModel()
         {
             newUser = new User();
-            firstName = "Klk";
-            lastName = "Perez";
+            firstName = newUser.FirstName;
+            lastName = newUser.LastName;
             password = newUser.Password;
             email = newUser.Email;
             confirmPassword = newUser.Password;
