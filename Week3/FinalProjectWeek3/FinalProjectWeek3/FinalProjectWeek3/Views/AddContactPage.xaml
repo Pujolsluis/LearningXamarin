@@ -5,9 +5,9 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0,32,0,0">
             <Image Source="ic_add_contact"  HorizontalOptions="CenterAndExpand" Scale="1.2"/>
-            <Entry Placeholder="Name" HorizontalOptions="FillAndExpand" Margin="16,8,16,0"/>
-            <Entry Placeholder="Phone Number" HorizontalOptions="FillAndExpand" Margin="16,8,16,0"/>
-            <Button Text="ADD"  TextColor="White" BackgroundColor="#009688" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Name}" Placeholder="Name" HorizontalOptions="FillAndExpand" Margin="16,8,16,0"/>
+            <Entry Text="{Binding PhoneNumber}" Placeholder="Phone Number" HorizontalOptions="FillAndExpand" Margin="16,8,16,0"/>
+            <Button Text="ADD"  TextColor="White" BackgroundColor="#009688" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Command="{Binding AddContact}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
