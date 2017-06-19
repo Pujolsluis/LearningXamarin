@@ -16,6 +16,7 @@ namespace FinalProjectWeek3.Views
         {
             InitializeComponent();
             this.Title = "My Contacts";
+            BindingContext = new ViewModels.ContactsPageViewModel();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace FinalProjectWeek3
         {
             InitializeComponent();
 
-            var nav = new NavigationPage(new Views.AddContactPage());
+            var nav = new NavigationPage(new Views.ContactPage());
             nav.BarBackgroundColor = Color.FromHex("FFC107");
             nav.BarTextColor = Color.White;
             nav.BackgroundColor = Color.White;

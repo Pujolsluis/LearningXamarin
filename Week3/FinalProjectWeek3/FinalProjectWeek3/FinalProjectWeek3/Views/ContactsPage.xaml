@@ -3,8 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProjectWeek3.Views.ContactPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
+        <ListView x:Name="listView" ItemsSource="{Binding Contacts}">
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding Name}"/>
+                        <Label Text="{Binding PhoneNumber}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

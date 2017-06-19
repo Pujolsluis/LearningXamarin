@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalProjectWeek3.Models
 {
-    class Contact
+    public class Contact
     {
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
