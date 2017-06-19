@@ -3,7 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProjectWeek2.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black" Padding="16,48,16,16">
+            <Image Source="logo.png" HorizontalOptions="CenterAndExpand"/>
+            <Label Text="User"/>
+            <Entry Text="" TextColor="White" Placeholder="Enter User. . . " PlaceholderColor="LightGoldenrodYellow"/>
+            <Label Text="Password"/>
+            <Entry Text="" TextColor="White" Placeholder="Enter Password. . ." IsPassword="True" PlaceholderColor="LightGoldenrodYellow"/>
+            <Button Text="SIGN IN" BackgroundColor="Yellow"/>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center" Orientation="Horizontal">
+                <Label Text="Don't Have an account?" TextColor="White"/>
+                <Label Text="Sign Up" TextColor="White"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
