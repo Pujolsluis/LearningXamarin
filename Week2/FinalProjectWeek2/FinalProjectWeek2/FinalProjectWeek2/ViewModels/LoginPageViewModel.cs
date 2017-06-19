@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using Xamarin.Forms;
 
 namespace FinalProjectWeek2.ViewModels
 {
-    class LoginPageViewModel
+    class LoginPageViewModel : INotifyPropertyChanged
     {
         public string User { get; set; }
         public string Password { get; set; }
@@ -22,6 +23,8 @@ namespace FinalProjectWeek2.ViewModels
             SignUp = new Command(signUpCommand);
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public void signInCommand()
         {
             if(String.IsNullOrEmpty(User) || String.IsNullOrEmpty(Password)){
@@ -30,7 +33,9 @@ namespace FinalProjectWeek2.ViewModels
             }
             else
             {
-                App.Current.MainPage.Navigation.PushAsync(new Views.MainTabbedPage());
+                Views.MainTabbedPage tabPag = new Views.MainTabbedPage();
+                tabPag.
+                App.Current.MainPage.Navigation.PushAsync(new Views.MainTabbedPage(User,"","",Password));
             }
         }
 
