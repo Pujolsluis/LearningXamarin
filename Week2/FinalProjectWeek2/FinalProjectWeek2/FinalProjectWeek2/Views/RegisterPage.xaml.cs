@@ -16,6 +16,7 @@ namespace FinalProjectWeek2.Views
         {
             InitializeComponent();
             this.Title = "Sign Up";
+            BindingContext = new ViewModels.RegisterPageViewModel();
         }
     }
 }
