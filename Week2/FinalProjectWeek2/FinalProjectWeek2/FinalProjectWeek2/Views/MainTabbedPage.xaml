@@ -12,19 +12,23 @@
         <StackLayout>
             <Label Text="Date:"/>
             <Label Text="12-42-45"/>
-            <Label Text="More info: http//www.mytime.net.au/" Margin="72,16,0,0"/>
+            <Label Text="More info: http://www.mytime.net.au/" Margin="72,16,0,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenWebPage}"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </ContentPage>
     <ContentPage Title="Profile" Icon="ic_person" Padding="16,24,16,16">
         <StackLayout>
             <Label Text="First Name:"  HorizontalOptions="FillAndExpand"/>
-            <Entry Text=""  HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name ="FirstName" Text="{Binding FirstName}"  HorizontalOptions="FillAndExpand"/>
             <Label Text="Last Name:"  HorizontalOptions="FillAndExpand"/>
-            <Entry Text=""  HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name ="LastName" Text="{Binding LastName}"  HorizontalOptions="FillAndExpand"/>
             <Label Text="Email:" HorizontalOptions="FillAndExpand"/>
-            <Entry Text="" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name ="Email" Text="{Binding Email}" HorizontalOptions="FillAndExpand"/>
             <Label Text="Password:" HorizontalOptions="FillAndExpand"/>
-            <Entry Text="" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name ="Password" Text="{Binding Password}" HorizontalOptions="FillAndExpand" IsPassword="True"/>
         </StackLayout>
     </ContentPage>
 </TabbedPage>

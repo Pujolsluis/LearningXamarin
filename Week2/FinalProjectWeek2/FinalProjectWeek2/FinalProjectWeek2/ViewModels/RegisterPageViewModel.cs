@@ -31,7 +31,7 @@ namespace FinalProjectWeek2.ViewModels
             }
             else
             {
-                App.Current.MainPage.Navigation.PushAsync(new Views.MainTabbedPage());
+                App.Current.MainPage.Navigation.PushAsync(new Views.MainTabbedPage(FirstName,LastName, Email, Password));
             }
         }
 

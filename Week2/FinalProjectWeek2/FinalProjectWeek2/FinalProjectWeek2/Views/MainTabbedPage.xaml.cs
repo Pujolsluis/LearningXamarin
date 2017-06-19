@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProjectWeek2.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,15 @@ namespace FinalProjectWeek2.Views
         {
             InitializeComponent();
             this.Title = "My Day App";
+            BindingContext = new ViewModels.TabbedPageViewModel();
+        }
+
+        public MainTabbedPage(string firstName, string lastName, string email, string password)
+        {
+            FirstName.Text = firstName;
+            LastName.Text = lastName;
+            Email.Text = email;
+            Password.Text = password;
         }
     }
 }
