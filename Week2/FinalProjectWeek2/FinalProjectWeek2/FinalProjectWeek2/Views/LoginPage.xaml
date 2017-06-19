@@ -5,13 +5,13 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black" Padding="16,48,16,16">
             <Image Source="logo.png" HorizontalOptions="CenterAndExpand"/>
-            <Label Text="User" TextColor="White"/>
-            <Entry Text="{Binding User}" TextColor="White" Placeholder="Enter User. . . " PlaceholderColor="LightGoldenrodYellow"/>
-            <Label Text="Password" TextColor="White"/>
+            <Label Text="User" Style="{DynamicResource darkBackgroundLabelStyle}"/>
+            <Entry Text="{Binding User}" Placeholder="Enter User. . . " Style="{DynamicResource darkBackgroundEntryStyle}"/>
+            <Label Text="Password"  Style="{DynamicResource darkBackgroundLabelStyle}"/>
             <Entry Text="{Binding Password}" TextColor="White" Placeholder="Enter Password. . ." IsPassword="True" PlaceholderColor="LightGoldenrodYellow"/>
             <Button Text="SIGN IN" BackgroundColor="Yellow" Command="{Binding SignIn}"/>
             <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center" Orientation="Horizontal">
-                <Label Text="Don't Have an account?" TextColor="White"/>
+                    <Label Text="Don't Have an account?" TextColor="White"/>
                 <Label Text="Sign Up" FontAttributes="Bold" TextColor="Yellow">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding SignUp}"/>
