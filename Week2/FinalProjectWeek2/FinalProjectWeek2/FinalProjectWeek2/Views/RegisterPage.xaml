@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProjectWeek2.Views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Black" Padding="16,32,16,16">
+            <Label Text="First Name" TextColor="White"  HorizontalOptions="FillAndExpand"/>
+            <Entry Text="" Placeholder="First Name. . ."  PlaceholderColor="LightGoldenrodYellow" TextColor="White" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Last Name" TextColor="White" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="" Placeholder="Last Name. . ." PlaceholderColor="LightGoldenrodYellow" TextColor="LightGoldenrodYellow" HorizontalOptions="FillAndExpand" />
+            <Label Text="Email"  TextColor="White"  HorizontalOptions="FillAndExpand"/>
+            <Entry Text="" Placeholder="Email. . ." PlaceholderColor="LightGoldenrodYellow" TextColor="LightGoldenrodYellow" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Password" TextColor="White" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="" Placeholder="Password. . ." PlaceholderColor="LightGoldenrodYellow" TextColor="LightGoldenrodYellow" HorizontalOptions="FillAndExpand"/>
+            <Button Text="SIGN UP" HorizontalOptions="FillAndExpand" BackgroundColor="Yellow" Margin="0,16,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

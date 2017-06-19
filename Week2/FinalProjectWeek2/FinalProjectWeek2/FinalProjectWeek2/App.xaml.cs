@@ -13,7 +13,7 @@ namespace FinalProjectWeek2
         {
             InitializeComponent();
 
-            MainPage = new Views.LoginPage();
+            MainPage = new NavigationPage(new Views.RegisterPage());
         }
 
         protected override void OnStart()
