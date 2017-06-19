@@ -15,6 +15,7 @@ namespace FinalProjectWeek3.Views
         public AddContactPage()
         {
             InitializeComponent();
+            this.Title = "New Contact";
         }
     }
 }

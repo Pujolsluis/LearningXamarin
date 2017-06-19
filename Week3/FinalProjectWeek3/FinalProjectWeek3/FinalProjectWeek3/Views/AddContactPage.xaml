@@ -3,8 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProjectWeek3.Views.AddContactPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0,32,0,0">
+            <Image Source="ic_add_contact"  HorizontalOptions="CenterAndExpand" Scale="1.2"/>
+            <Entry Placeholder="Name" HorizontalOptions="FillAndExpand" Margin="16,8,16,0"/>
+            <Entry Placeholder="Phone Number" HorizontalOptions="FillAndExpand" Margin="16,8,16,0"/>
+            <Button Text="ADD"  TextColor="White" BackgroundColor="#009688" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

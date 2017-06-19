@@ -15,6 +15,7 @@ namespace FinalProjectWeek3.Views
         public ContactPage()
         {
             InitializeComponent();
+            this.Title = "My Contacts";
         }
     }
 }
