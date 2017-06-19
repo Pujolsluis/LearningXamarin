@@ -11,7 +11,7 @@
         </ContentPage.ToolbarItems>
         <StackLayout>
             <Label Text="Date:"/>
-            <Label Text="12-42-45"/>
+            <Label Text="{Binding Date}"/>
             <Label Text="More info: http://www.mytime.net.au/" Margin="72,16,0,0">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding OpenWebPage}"/>

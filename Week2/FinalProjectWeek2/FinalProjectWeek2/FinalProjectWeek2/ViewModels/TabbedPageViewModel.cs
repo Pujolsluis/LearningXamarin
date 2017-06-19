@@ -20,7 +20,8 @@ namespace FinalProjectWeek2.ViewModels
         public TabbedPageViewModel()
         {
             OpenWebPage = new Command(openWebPageCommand);
-            Device.StartTimer(new TimeSpan(0, 0, 60), () => {
+            Date = DateTime.Now;
+            Device.StartTimer(new TimeSpan(0, 0, 1), () => {
                 Date = DateTime.Now;
                 return true; // runs again, or false to stop
             });
