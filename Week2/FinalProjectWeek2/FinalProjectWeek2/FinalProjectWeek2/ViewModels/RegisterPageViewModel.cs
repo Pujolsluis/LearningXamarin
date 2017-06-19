@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using Xamarin.Forms;
 
 namespace FinalProjectWeek2.ViewModels
 {
-    class RegisterPageViewModel
+    class RegisterPageViewModel : INotifyPropertyChanged
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -17,9 +18,14 @@ namespace FinalProjectWeek2.ViewModels
 
         public RegisterPageViewModel()
         {
-            FirstName = "Toy Bindiado";
+            FirstName = "";
+            LastName = "";
+            Email = "";
+            Password = "";
             SignUp = new Command(signUpCommand);
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private void signUpCommand()
         {
@@ -31,7 +37,7 @@ namespace FinalProjectWeek2.ViewModels
             }
             else
             {
-                App.Current.MainPage.Navigation.PushAsync(new Views.MainTabbedPage());
+                App.Current.MainPage.Navigation.PushAsync(new Views.MainTabbedPage(FirstName,LastName, Email, Password));
             }
         }
 
