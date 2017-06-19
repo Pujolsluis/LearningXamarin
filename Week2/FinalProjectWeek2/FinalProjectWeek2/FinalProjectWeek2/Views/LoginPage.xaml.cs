@@ -15,7 +15,8 @@ namespace FinalProjectWeek2.Views
         public LoginPage()
         {
             InitializeComponent();
-            
+            NavigationPage.SetHasNavigationBar(this, false);
+            BindingContext = new ViewModels.LoginPageViewModel();
         }
     }
 }

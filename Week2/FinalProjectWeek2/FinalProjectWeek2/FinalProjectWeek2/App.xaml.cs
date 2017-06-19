@@ -13,7 +13,7 @@ namespace FinalProjectWeek2
         {
             InitializeComponent();
 
-            var nav = new NavigationPage(new Views.MainTabbedPage());
+            var nav = new NavigationPage(new Views.LoginPage());
             nav.BarBackgroundColor = Color.FromHex("1d2029");
             nav.BarTextColor = Color.White;
             nav.BackgroundColor = Color.White;
