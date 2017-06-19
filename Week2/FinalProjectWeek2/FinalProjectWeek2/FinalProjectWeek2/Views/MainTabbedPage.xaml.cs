@@ -10,11 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace FinalProjectWeek2.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainTabbedPage : ContentPage
+    public partial class MainTabbedPage : TabbedPage
     {
         public MainTabbedPage()
         {
             InitializeComponent();
+            this.Title = "My Day App";
         }
     }
 }

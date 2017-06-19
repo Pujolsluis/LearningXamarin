@@ -1,10 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProjectWeek2.Views.MainTabbedPage">
-    <ContentPage.Content>
+             x:Class="FinalProjectWeek2.Views.MainTabbedPage"
+            BarBackgroundColor="#1d2029">
+    <ContentPage Title="Home" Icon="ic_home" Padding="16,24,16,16">
+        <ContentPage.ToolbarItems>
+            <ToolbarItem Order="Primary" Text="Help" Priority="0" />
+            <ToolbarItem Order="Secondary" Text="About Us" Priority="0" />
+            <ToolbarItem Order="Secondary" Text="Contact Us" Priority="0" />
+        </ContentPage.ToolbarItems>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <Label Text="Date:"/>
+            <Label Text="12-42-45"/>
+            <Label Text="More info: http//www.mytime.net.au/" Margin="72,16,0,0"/>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
+    <ContentPage Title="Profile" Icon="ic_person" Padding="16,24,16,16">
+        <StackLayout>
+            <Label Text="First Name:"  HorizontalOptions="FillAndExpand"/>
+            <Entry Text=""  HorizontalOptions="FillAndExpand"/>
+            <Label Text="Last Name:"  HorizontalOptions="FillAndExpand"/>
+            <Entry Text=""  HorizontalOptions="FillAndExpand"/>
+            <Label Text="Email:" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="" HorizontalOptions="FillAndExpand"/>
+            <Label Text="Password:" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
