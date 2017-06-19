@@ -15,6 +15,7 @@ namespace FinalProjectWeek2.Views
         public LoginPage()
         {
             InitializeComponent();
+            
         }
     }
 }

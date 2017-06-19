@@ -13,7 +13,12 @@ namespace FinalProjectWeek2
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.RegisterPage());
+            var nav = new NavigationPage(new Views.RegisterPage());
+            nav.BarBackgroundColor = Color.FromHex("1d2029");
+            nav.BarTextColor = Color.White;
+            nav.BackgroundColor = Color.White;
+            MainPage = nav;
+
         }
 
         protected override void OnStart()

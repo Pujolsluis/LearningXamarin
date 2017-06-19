@@ -15,6 +15,7 @@ namespace FinalProjectWeek2.Views
         public RegisterPage()
         {
             InitializeComponent();
+            this.Title = "Sign Up";
         }
     }
 }
