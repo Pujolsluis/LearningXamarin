@@ -23,6 +23,8 @@ namespace FinalProjectWeek2.Views
         public MainTabbedPage(string firstName, string lastName, string email, string password)
         {
             InitializeComponent();
+            this.Title = "My Day App";
+            BindingContext = new ViewModels.TabbedPageViewModel();
             if (!(String.IsNullOrEmpty(firstName) || String.IsNullOrEmpty(lastName) || String.IsNullOrEmpty(email) || String.IsNullOrEmpty(password)))
             {
                 FirstName.Text = firstName;

@@ -11,7 +11,7 @@
             <Label Text="Email"  TextColor="White"  HorizontalOptions="FillAndExpand"/>
             <Entry Text="{Binding Email}" Placeholder="Email. . ." PlaceholderColor="LightGoldenrodYellow" TextColor="LightGoldenrodYellow" HorizontalOptions="FillAndExpand"/>
             <Label Text="Password" TextColor="White" HorizontalOptions="FillAndExpand"/>
-            <Entry Text="{Binding Password}" Placeholder="Password. . ." PlaceholderColor="LightGoldenrodYellow" TextColor="LightGoldenrodYellow" HorizontalOptions="FillAndExpand"/>
+            <Entry Text="{Binding Password}" Placeholder="Password. . ." PlaceholderColor="LightGoldenrodYellow" TextColor="LightGoldenrodYellow" HorizontalOptions="FillAndExpand" IsPassword="True"/>
             <Button Text="SIGN UP" HorizontalOptions="FillAndExpand" BackgroundColor="Yellow" Margin="0,16,0,0" Command="{Binding SignUp}"/>
         </StackLayout>
     </ContentPage.Content>

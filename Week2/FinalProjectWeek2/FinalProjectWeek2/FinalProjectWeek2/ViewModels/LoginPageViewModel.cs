@@ -32,9 +32,7 @@ namespace FinalProjectWeek2.ViewModels
                 Password = null;
             }
             else
-            {
-                Views.MainTabbedPage tabPag = new Views.MainTabbedPage();
-                tabPag.
+            {                
                 App.Current.MainPage.Navigation.PushAsync(new Views.MainTabbedPage(User,"","",Password));
             }
         }
