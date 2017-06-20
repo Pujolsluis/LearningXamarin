@@ -1,4 +1,5 @@
 ﻿using FinalProjectWeek3.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -27,8 +28,11 @@ namespace FinalProjectWeek3.Views
             var menuItem = (MenuItem)sender;
             var param = (Contact)menuItem.CommandParameter;
             var answer = await App.Current.MainPage.DisplayAlert("Delete?", "Would you like to delete the contact: " + param.Name, "Yes", "No");
-            if(answer)
+            if (answer)
+            {
                 myViewModel.Contacts.Remove(param);
+                Settings.ContactList = JsonConvert.SerializeObject(myViewModel.Contacts);
+            }
         }
     }
 }

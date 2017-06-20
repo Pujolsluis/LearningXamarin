@@ -1,4 +1,5 @@
 ﻿using FinalProjectWeek3.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,6 +13,7 @@ namespace FinalProjectWeek3.ViewModels
 {
     class ContactsPageViewModel : INotifyPropertyChanged
     {
+        public const string ContactListKey = "contactListData";
         public ObservableCollection<Contact> Contacts { get; set; } = new ObservableCollection<Contact>();
         public Command addContactToList { get; set; }
 
@@ -19,12 +21,20 @@ namespace FinalProjectWeek3.ViewModels
 
         public ContactsPageViewModel()
         {
-            Contacts.Add(new Contact { Name = "Luis Pujols", PhoneNumber = "829-421-2414" });
-            Contacts.Add(new Contact { Name = "Jennifer Pujols", PhoneNumber = "829-421-2413" });
+            var serializedContacts = Settings.ContactList;
+            if (serializedContacts != String.Empty)
+            {
+                Contacts = JsonConvert.DeserializeObject<ObservableCollection<Contact>>(Settings.ContactList);
+            }
+            else
+            {
+                Contacts = new ObservableCollection<Contact>();
+            }
             addContactToList = new Command(addContactCommand);
             MessagingCenter.Subscribe<ViewModels.AddContactPageViewModel, Contact>(this, "Contact", (sender, param) =>
             {
                 Contacts.Add(param);
+                Settings.ContactList = JsonConvert.SerializeObject(Contacts);
             });
         }
 

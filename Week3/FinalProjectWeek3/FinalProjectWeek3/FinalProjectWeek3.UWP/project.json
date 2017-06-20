@@ -2,6 +2,8 @@
   "dependencies": {
     "Fody": "2.1.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Newtonsoft.Json": "10.0.3",
+    "Xam.Plugins.Settings": "2.5.8",
     "Xamarin.Forms": "2.3.4.224"
   },
   "frameworks": {
