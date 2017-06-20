@@ -22,11 +22,16 @@ namespace FinalProjectWeek3.ViewModels
             Contacts.Add(new Contact { Name = "Luis Pujols", PhoneNumber = "829-421-2414" });
             Contacts.Add(new Contact { Name = "Jennifer Pujols", PhoneNumber = "829-421-2413" });
             addContactToList = new Command(addContactCommand);
+            MessagingCenter.Subscribe<ViewModels.AddContactPageViewModel, Contact>(this, "Contact", (sender, param) =>
+            {
+                Contacts.Add(param);
+            });
         }
 
         public void addContactCommand()
         {
             App.Current.MainPage.Navigation.PushAsync(new Views.AddContactPage());
         }
+        
     }
 }

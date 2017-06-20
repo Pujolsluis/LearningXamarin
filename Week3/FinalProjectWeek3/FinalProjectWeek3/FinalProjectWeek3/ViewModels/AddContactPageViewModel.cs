@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProjectWeek3.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -17,12 +18,23 @@ namespace FinalProjectWeek3.ViewModels
 
         public AddContactPageViewModel()
         {
-            AddContact = new Command(addContactCommand);
+            AddContact = new Command(async(x) => await addContactCommand());
         }
 
-        private void addContactCommand()
+        private async Task addContactCommand()
         {
-            App.Current.MainPage.DisplayAlert("Accepted", "Tamo Bindeao!", "OK");
+            if (String.IsNullOrEmpty(Name) || String.IsNullOrEmpty(PhoneNumber))
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "All fields must be completed", "OK");
+            }
+            else
+            {
+                var answer = await App.Current.MainPage.DisplayAlert("Add?", "Do you wish to add this contact to your directory?", "YES", "NO");
+                Contact newContact = new Contact { Name = Name, PhoneNumber = PhoneNumber };
+                if (answer)
+                    MessagingCenter.Send<ViewModels.AddContactPageViewModel, Contact>(this, "Contact", newContact);
+                await App.Current.MainPage.Navigation.PopAsync();
+            }
 
         }
     }
