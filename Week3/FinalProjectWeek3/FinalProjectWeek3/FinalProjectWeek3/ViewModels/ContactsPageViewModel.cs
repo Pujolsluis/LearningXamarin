@@ -17,6 +17,26 @@ namespace FinalProjectWeek3.ViewModels
         public ObservableCollection<Contact> Contacts { get; set; } = new ObservableCollection<Contact>();
         public Command addContactToList { get; set; }
 
+        Contact _itemSelected;
+        public Contact ItemSelected
+        {
+            get
+            {
+                return _itemSelected;
+            }
+            set
+            {
+                _itemSelected = value;
+
+                if (_itemSelected != null)
+                {
+                    var answer = callContactAsync(_itemSelected);
+                    
+                }
+
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         public ContactsPageViewModel()
@@ -42,6 +62,13 @@ namespace FinalProjectWeek3.ViewModels
         {
             App.Current.MainPage.Navigation.PushAsync(new Views.AddContactPage());
         }
-        
+
+        public async Task callContactAsync(Contact value)
+        {
+            var answer = await App.Current.MainPage.DisplayAlert("Call?", "Are you sure you want to call " + value.Name, "YES", "NO");
+            if (answer)
+                DependencyService.Get<ICallContact>().dialContact(value.PhoneNumber);
+        }
+
     }
 }

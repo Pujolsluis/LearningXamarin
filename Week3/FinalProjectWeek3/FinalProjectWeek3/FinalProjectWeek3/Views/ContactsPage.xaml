@@ -6,7 +6,7 @@
         <ToolbarItem Name="AddContact" Order="Primary" Icon="ic_add_contact" Text="ADD" Command="{Binding addContactToList}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView x:Name="listView" ItemsSource="{Binding Contacts}" RowHeight="80">
+        <ListView x:Name="listView" ItemsSource="{Binding Contacts}" SelectedItem="{Binding ItemSelected}" RowHeight="80">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
