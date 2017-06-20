@@ -6,12 +6,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace FinalProjectWeek3.ViewModels
 {
     class ContactsPageViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<Contact> Contacts { get; set; } = new ObservableCollection<Contact>();
+        public Command addContactToList { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -19,6 +21,12 @@ namespace FinalProjectWeek3.ViewModels
         {
             Contacts.Add(new Contact { Name = "Luis Pujols", PhoneNumber = "829-421-2414" });
             Contacts.Add(new Contact { Name = "Jennifer Pujols", PhoneNumber = "829-421-2413" });
+            addContactToList = new Command(addContactCommand);
+        }
+
+        public void addContactCommand()
+        {
+            App.Current.MainPage.Navigation.PushAsync(new Views.AddContactPage());
         }
     }
 }
