@@ -3,5 +3,5 @@
 	<uses-sdk android:minSdkVersion="13" />
 	<uses-permission android:name="android.permission.CALL_PHONE" />
 	<uses-permission android:name="android.permission.CALL_PRIVILEGED" />
-	<application android:label="FinalProjectWeek3.Android"></application>
+	<application android:label="Agenda" android:icon="@drawable/ic_launcher"></application>
 </manifest>
