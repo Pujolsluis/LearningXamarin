@@ -17,7 +17,7 @@ using FinalProjectWeek3.Droid;
 [assembly: Xamarin.Forms.Dependency (typeof(MainActivity))]
 namespace FinalProjectWeek3.Droid
 {
-    [Activity(Label = "FinalProjectWeek3", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Agenda", Icon = "@drawable/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, ICallContact
     {
         protected override void OnCreate(Bundle bundle)
