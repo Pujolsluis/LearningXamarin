@@ -29,7 +29,7 @@ namespace FinalProjectWeek3.ViewModels
             }
             else
             {
-                var answer = await App.Current.MainPage.DisplayAlert("Add?", "Do you wish to add this contact to your directory?", "YES", "NO");
+                var answer = await App.Current.MainPage.DisplayAlert("ADD", "Do you wish to add this contact to your directory?", "YES", "NO");
                 Contact newContact = new Contact { Name = Name, PhoneNumber = PhoneNumber };
                 if (answer)
                     MessagingCenter.Send<ViewModels.AddContactPageViewModel, Contact>(this, "Contact", newContact);

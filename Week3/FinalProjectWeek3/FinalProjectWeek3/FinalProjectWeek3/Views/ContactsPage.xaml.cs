@@ -27,7 +27,7 @@ namespace FinalProjectWeek3.Views
             var myViewModel = (ViewModels.ContactsPageViewModel)this.BindingContext;
             var menuItem = (MenuItem)sender;
             var param = (Contact)menuItem.CommandParameter;
-            var answer = await App.Current.MainPage.DisplayAlert("Delete?", "Would you like to delete the contact: " + param.Name, "Yes", "No");
+            var answer = await App.Current.MainPage.DisplayAlert("DELETE", "Would you like to delete the contact: " + param.Name + "?", "Yes", "No");
             if (answer)
             {
                 myViewModel.Contacts.Remove(param);
