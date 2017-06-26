@@ -4,8 +4,8 @@
              xmlns:local="clr-namespace:CustomBoxViewRenderer"
              x:Class="CustomBoxViewRenderer.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout Padding="20" Spacing="20">
+        <BoxView WidthRequest="200" HeightRequest="200" BackgroundColor="Red"/>
+    </StackLayout>
 
 </ContentPage>
