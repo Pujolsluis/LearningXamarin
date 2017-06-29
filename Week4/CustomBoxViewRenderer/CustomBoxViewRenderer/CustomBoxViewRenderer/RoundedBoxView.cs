@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace CustomBoxViewRenderer
+namespace CustomBoxViewRenderer.Controls
 {
-    class RoundedBoxView : BoxView
+    public class RoundedBoxView : BoxView
     {
         public static readonly BindableProperty CornerRadiusProperty =
             BindableProperty.Create<RoundedBoxView, double>(p => p.CornerRadius, 0);

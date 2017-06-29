@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using CustomBoxViewRenderer.iOS;
+using CoreGraphics;
+using Xamarin.Forms.Platform.iOS;
+using Xamarin.Forms;
+using CustomBoxViewRenderer.Controls;
 
-using Foundation;
-using UIKit;
-
+[assembly: ExportRendererAttribute(typeof(RoundedBoxView), typeof(RoundedBoxViewRenderer))]
 namespace CustomBoxViewRenderer.iOS
 {
-    class RoundedBoxViewRenderer
+    public class RoundedBoxViewRenderer : BoxRenderer
     {
+        public override void Draw(CGRect rect)
+        {
+            RoundedBoxView rbv = (RoundedBoxView) this.Element;
+        }
     }
 }
