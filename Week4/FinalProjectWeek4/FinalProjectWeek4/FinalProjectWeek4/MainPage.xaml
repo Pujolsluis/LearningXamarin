@@ -3,9 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FinalProjectWeek4"
              x:Class="FinalProjectWeek4.MainPage">
+    <StackLayout>
 
-	<Label Text="Welcome to Xamarin Forms!" 
+        <Label Text="Welcome to Xamarin Forms!" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
+
+        <local:DrawView
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+            />
+    </StackLayout>
+	
 
 </ContentPage>
