@@ -1,13 +1,13 @@
 ﻿using System;
 using Android.Graphics;
 using Android.Widget;
-using HomeWorkWeek4.Droid.Effects;
+using FinalProjectWeek4.Droid.Effects;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ResolutionGroupName("XamarinWorkShopINTEC")]
+[assembly: ResolutionGroupName("myEffects")]
 [assembly: ExportEffect(typeof(MyDroidFontLabelEffect), "FontEffect")]
-namespace HomeWorkWeek4.Droid.Effects
+namespace FinalProjectWeek4.Droid.Effects
 {
 	public class MyDroidFontLabelEffect : PlatformEffect
 	{

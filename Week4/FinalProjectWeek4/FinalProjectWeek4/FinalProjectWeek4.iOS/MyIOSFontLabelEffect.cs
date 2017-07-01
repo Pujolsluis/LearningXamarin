@@ -1,12 +1,12 @@
 ﻿using System;
-using HomeWorkWeek4.iOS.Effects;
+using FinalProjectWeek4.iOS.Effects;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ResolutionGroupName("XamarinWorkShopINTEC")]
 [assembly: ExportEffect(typeof(MyIOSFontLabelEffect), "FontEffect")]
-namespace HomeWorkWeek4.iOS.Effects
+namespace FinalProjectWeek4.iOS.Effects
 {
 	public class MyIOSFontLabelEffect : PlatformEffect
 	{

@@ -1,18 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FinalProjectWeek4"
+             xmlns:local="clr-namespace:FinalProjectWeek4.Controls"
              x:Class="FinalProjectWeek4.MainPage">
-    <StackLayout>
-
-        <Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
-        <local:DrawView
-                VerticalOptions="CenterAndExpand"
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="0,20,0,0">
+        <Label x:Name="titleLabel" Text="Welcome to our App" HorizontalOptions="CenterAndExpand" FontSize="20"/>
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Button
+                x:Name="redButton"
+                BackgroundColor="Red"
                 HorizontalOptions="FillAndExpand"
+                Clicked="Button_Clicked"/>
+            <Button
+                x:Name="blueButton"
+                BackgroundColor="Blue"
+                HorizontalOptions="FillAndExpand"
+                Clicked="Button_Clicked"/>
+            <Button
+                x:Name="yellowButton"
+                BackgroundColor="Yellow"
+                HorizontalOptions="FillAndExpand"
+                Clicked="Button_Clicked"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Button
+                x:Name="greenButton"
+                BackgroundColor="Green"
+                HorizontalOptions="FillAndExpand"
+                Clicked="Button_Clicked"/>
+            <Button
+                x:Name="grayButton"
+                BackgroundColor="Gray"
+                HorizontalOptions="FillAndExpand"
+                Clicked="Button_Clicked"/>
+            <Button
+                x:Name="lightBlueButton"
+                BackgroundColor="SkyBlue"
+                HorizontalOptions="FillAndExpand"
+                Clicked="Button_Clicked"/>
+        </StackLayout>
+        <local:DrawView
+            x:Name="myDrawView"
+            WidthRequest="500"
+            HeightRequest="500"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
             />
+       
+
+
+
     </StackLayout>
 	
 

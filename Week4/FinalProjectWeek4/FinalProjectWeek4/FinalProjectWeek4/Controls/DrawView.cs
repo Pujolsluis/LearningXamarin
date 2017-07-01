@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace FinalProjectWeek4
+namespace FinalProjectWeek4.Controls
 {
-    class DrawView : View
+    public class DrawView : View
     {
         public static readonly BindableProperty DrawColorProperty = BindableProperty.Create <DrawView,Color>(p => p.DrawColor, Color.Black);
         

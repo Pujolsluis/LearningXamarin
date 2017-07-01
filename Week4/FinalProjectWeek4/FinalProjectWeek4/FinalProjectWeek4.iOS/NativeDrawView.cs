@@ -3,7 +3,7 @@ using CoreGraphics;
 using UIKit;
 using System.Drawing;
 
-namespace HomeWorkWeek4.iOS
+namespace FinalProjectWeek4.iOS
 {
 	public class NativeDrawView : UIView
 	{

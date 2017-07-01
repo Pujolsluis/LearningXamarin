@@ -6,20 +6,21 @@ using Android.Graphics;
 using System.Collections.Generic;
 using System.Linq;
 using Xamarin.Forms;
-using HomeWorkWeek4.Droid;
 using FinalProjectWeek4.Controls;
+using FinalProjectWeek4.Droid;
 
-[assembly: ExportRenderer(typeof(DrawView), typeof(NativeDrawView))]
-namespace HomeWorkWeek4.Droid
+
+namespace FinalProjectWeek4.Droid
 {
-	public class NativeDrawView : View
-	{
-		IList<Tuple<Path,Color>> paths = new List<Tuple<Path, Color>>();
+
+	public class NativeDrawView : Android.Views.View
+    {
+		IList<Tuple<Path, Android.Graphics.Color>> paths = new List<Tuple<Path, Android.Graphics.Color>>();
 		//drawing path
 		private Path drawPath;
 		//drawing and canvas paint
 		private Paint drawPaint, canvasPaint;
-        public Color PaintColor { get { return drawPaint?.Color ?? Color.Black; } set { drawPaint.Color = value; var path = new Path(); paths.Add(new Tuple<Path, Color>(path,drawPaint.Color)); } }
+        public Android.Graphics.Color PaintColor { get { return drawPaint?.Color ?? Android.Graphics.Color.Black; } set { drawPaint.Color = value; var path = new Path(); paths.Add(new Tuple<Path, Android.Graphics.Color>(path,drawPaint.Color)); } }
 		//canvas
 		private Canvas drawCanvas;
 		//canvas bitmap
@@ -38,15 +39,14 @@ namespace HomeWorkWeek4.Droid
 		public NativeDrawView(Context context) : base(context)
 		{
 			Initialize();
-		}
+		}     
 
 
-
-		void Initialize()
+        void Initialize()
 		{
 			drawPath = new Path();
 			drawPaint = new Paint();
-			drawPaint.Color = Color.Black;
+			drawPaint.Color = Android.Graphics.Color.Black;
 			drawPaint.AntiAlias = true;
 			drawPaint.StrokeWidth = 20;
 			drawPaint.SetStyle(Paint.Style.Stroke);
@@ -68,7 +68,7 @@ namespace HomeWorkWeek4.Droid
 			canvas.DrawBitmap(canvasBitmap, 0, 0, canvasPaint);
 			//canvas.DrawPath(drawPath, drawPaint);
 
-			foreach(Tuple<Path, Color> path in paths)
+			foreach(Tuple<Path, Android.Graphics.Color> path in paths)
 			{
                 drawPaint.Color = path.Item2;
                 canvas.DrawPath(path.Item1, drawPaint);
