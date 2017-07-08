@@ -13,7 +13,7 @@ namespace FinalProjectWeek5
         {
             InitializeComponent();
 
-            MainPage = new FinalProjectWeek5.MainPage();
+            MainPage = new FinalProjectWeek5.Views.WeatherPageView();
         }
 
         protected override void OnStart()
