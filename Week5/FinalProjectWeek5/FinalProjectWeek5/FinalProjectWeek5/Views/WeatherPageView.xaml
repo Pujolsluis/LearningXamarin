@@ -5,6 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="16,16,16,16" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Label x:Name="WeatherLocation" Text="Welcome to Weather in Santo Domingo App"/>
+            <Picker x:Name="WeatherPicker"/>
             <Button Text="Get Weather" TextColor="White" BackgroundColor="Black" HorizontalOptions="FillAndExpand" Clicked="Button_ClickedAsync"/>
             <Image x:Name="WeatherImage" WidthRequest="80" HeightRequest="80" Margin="0,16,0,8" Source="" HorizontalOptions="CenterAndExpand"/>
             <Label x:Name="WeatherTitle" FontSize="Large" HorizontalOptions="CenterAndExpand"/>

@@ -19,10 +19,21 @@ namespace FinalProjectWeek5.Views
         public WeatherPageView()
         {
             InitializeComponent();
-            
+            InitializePickerAsync();
         }
 
-        private async Task Button_ClickedAsync(object sender, EventArgs e)
+
+        private async void InitializePickerAsync()
+        {
+            WeatherPicker.Title = "Select a Province";
+            var pickerData = await GetProvinceQueryDataAsync();
+            foreach(Result result in pickerData.result)
+            {
+                WeatherPicker.Items.Add(result.Province.name);
+            }
+        }
+
+        private async void Button_ClickedAsync(object sender, EventArgs e)
         {
             var weather = await GetDataAsync();
             WeatherLocation.Text = "Welcome to Weather in " + weather.location.name + " App";
@@ -38,6 +49,14 @@ namespace FinalProjectWeek5.Views
             HttpClient client = new HttpClient();
             string result = await client.GetStringAsync(Url);
             return JsonConvert.DeserializeObject<Weather>(result);
+        }
+
+        private async Task<ProvincesQuery> GetProvinceQueryDataAsync()
+        {
+            string Url = "https://www.menu.com.do/api/v1/provinces.json";
+            HttpClient client = new HttpClient();
+            string resultProvince = await client.GetStringAsync(Url);
+            return JsonConvert.DeserializeObject<ProvincesQuery>(resultProvince);
         }
     }
 }
