@@ -13,7 +13,7 @@ namespace NetStatus
         {
             InitializeComponent();
 
-            MainPage = new NetStatus.MainPage();
+            MainPage = new NetStatus.Views.NoNetworkPage();
         }
 
         protected override void OnStart()
