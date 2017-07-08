@@ -25,7 +25,7 @@ namespace FinalProjectWeek5.Views
         private async Task Button_ClickedAsync(object sender, EventArgs e)
         {
             var weather = await GetDataAsync();
-            WeatherLocation.Text = "Welcome to Weather " + weather.location.name + " App";
+            WeatherLocation.Text = "Welcome to Weather in " + weather.location.name + " App";
             WeatherImage.Source = "https:" + weather.current.condition.icon;
             WeatherTitle.Text = weather.current.condition.text;
             TempC.Text = weather.current.temp_c + "°" + "C";
