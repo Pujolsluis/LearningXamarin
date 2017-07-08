@@ -6,10 +6,10 @@
         <StackLayout Padding="16,16,16,16" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Label x:Name="WeatherLocation" Text="Welcome to Weather in Location"/>
             <Button Text="Get Weather" TextColor="White" BackgroundColor="Black" HorizontalOptions="FillAndExpand"/>
-            <Image x:Name="WeatherImage" Source="" HorizontalOptions="CenterAndExpand"/>
-            <Label x:Name="WeatherTitle" Text="Weather Title" FontSize="16" HorizontalOptions="CenterAndExpand"/>
-            <Label x:Name="TempC" Text="Temp in C" FontSize="16" HorizontalOptions="CenterAndExpand"/>
-            <Label x:Name="TempF" Text="Temp in F" FontSize="16" HorizontalOptions="CenterAndExpand"/>
+            <Image x:Name="WeatherImage" Margin="0,32,0,16" Source="" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="WeatherTitle" Text="Weather Title" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="TempC" Text="Temp in C" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="TempF" Text="Temp in F" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
