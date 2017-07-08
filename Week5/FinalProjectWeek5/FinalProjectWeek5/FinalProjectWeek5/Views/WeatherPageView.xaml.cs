@@ -16,10 +16,13 @@ namespace FinalProjectWeek5.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WeatherPageView : ContentPage
     {
+        public string ProvinceToSearch { get; set; }
+
         public WeatherPageView()
         {
             InitializeComponent();
             InitializePickerAsync();
+            ProvinceToSearch = "Santo Domingo";
         }
 
 
@@ -31,6 +34,19 @@ namespace FinalProjectWeek5.Views
             {
                 WeatherPicker.Items.Add(result.Province.name);
             }
+
+            WeatherPicker.SelectedIndexChanged += (sender, args) =>
+            {
+                if (WeatherPicker.SelectedIndex == -1)
+                {
+                    return;
+                }
+                else
+                {
+                    ProvinceToSearch = WeatherPicker.SelectedItem.ToString();
+                }
+            };
+
         }
 
         private async void Button_ClickedAsync(object sender, EventArgs e)
@@ -45,7 +61,7 @@ namespace FinalProjectWeek5.Views
 
         private async Task<Weather> GetDataAsync()
         {
-            string Url = "https://api.apixu.com/v1/current.json?key=3cf69de69a9a4af78bc151306170107&q=Santo%20Domingo";
+            string Url ="https://api.apixu.com/v1/current.json?key=3cf69de69a9a4af78bc151306170107&q=" + System.Net.WebUtility.UrlEncode(ProvinceToSearch);
             HttpClient client = new HttpClient();
             string result = await client.GetStringAsync(Url);
             return JsonConvert.DeserializeObject<Weather>(result);
