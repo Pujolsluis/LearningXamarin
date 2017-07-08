@@ -4,7 +4,7 @@
              x:Class="NetStatus.Views.NetworkViewPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <Label x:Name="Connection Details" Text="Welcome to Xamarin Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="ConnectionDetails" Text="Welcome to Xamarin Forms!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
