@@ -28,6 +28,19 @@ namespace NetStatus
         protected override void OnStart()
         {
             // Handle when your app starts
+            CrossConnectivity.Current.ConnectivityChanged += Current_ConnectivityChanged;
+        }
+
+        private void Current_ConnectivityChanged(object sender, Plugin.Connectivity.Abstractions.ConnectivityChangedEventArgs e)
+        {
+            if (CrossConnectivity.Current.IsConnected)
+            {
+                MainPage = new NetStatus.Views.NetworkViewPage();
+            }
+            else
+            {
+                MainPage = new NetStatus.Views.NoNetworkPage();
+            }
         }
 
         protected override void OnSleep()
