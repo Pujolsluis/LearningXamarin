@@ -23,6 +23,7 @@ namespace FinalProjectWeek5.Views
             InitializeComponent();
             InitializePickerAsync();
             ProvinceToSearch = "Santo Domingo";
+            this.Title = "Weather App";
         }
 
 
