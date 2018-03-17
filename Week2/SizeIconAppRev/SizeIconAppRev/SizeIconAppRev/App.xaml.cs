@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace ColorPrEditRev
+namespace SizeIconAppRev
 {
 	public partial class App : Application
 	{
@@ -15,7 +13,7 @@ namespace ColorPrEditRev
 		{
 			InitializeComponent();
 
-			MainPage = new ColorPrEditRev.MainPage();
+			MainPage = new SizeIconAppRev.MainPage();
 		}
 
 		protected override void OnStart ()
