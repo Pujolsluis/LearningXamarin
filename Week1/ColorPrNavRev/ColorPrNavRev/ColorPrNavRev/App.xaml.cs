@@ -13,7 +13,7 @@ namespace ColorPrNavRev
 		{
 			InitializeComponent();
 
-			MainPage = new ColorPrNavRev.MainPage();
+			MainPage = new NavigationPage( new ColorPrNavRev.MainPage());
 		}
 
 		protected override void OnStart ()
