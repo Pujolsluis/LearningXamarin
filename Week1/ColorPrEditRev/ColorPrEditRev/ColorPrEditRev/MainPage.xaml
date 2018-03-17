@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ColorPrEditRev"
+             x:Class="ColorPrEditRev.MainPage"
+             Padding="16">
+
+	<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+	             Spacing="16" Padding="16">
+        <StackLayout 
+            VerticalOptions="Fill"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            Spacing="8">
+            <Label Text="Text"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   TextColor="#212121"/>
+            <Entry x:Name="textEntry"
+                   HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+	    <StackLayout 
+	        VerticalOptions="Fill"
+	        HorizontalOptions="FillAndExpand"
+	        Orientation="Horizontal"
+	        Spacing="8">
+	        <Label Text="Size"
+	               FontAttributes="Bold"
+	               FontSize="16"
+	               TextColor="#212121"/>
+	        <Picker x:Name="sizePicker" Title="Size"
+	               HorizontalOptions="FillAndExpand"/>
+	    </StackLayout>
+        
+        <StackLayout
+            VerticalOptions="Fill"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            HeightRequest="62">
+            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                    x:Name="redButton"
+                    Text="Red"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="Red"/>
+            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                    x:Name="blueButton"
+                    Text="Blue"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="Blue"/>
+            <Button HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+                    x:Name="greenButton"
+                    Text="Green"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="Green"/>
+        </StackLayout>
+        <Label
+            x:Name="resultLabel"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"/>
+
+</StackLayout>
+
+</ContentPage>
