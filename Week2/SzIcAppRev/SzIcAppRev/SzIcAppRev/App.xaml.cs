@@ -13,7 +13,7 @@ namespace SzIcAppRev
 		{
 			InitializeComponent();
 
-			MainPage = new SzIcAppRev.MainPage();
+			MainPage = new NavigationPage(new SzIcAppRev.Views.LoginPage());
 		}
 
 		protected override void OnStart ()
