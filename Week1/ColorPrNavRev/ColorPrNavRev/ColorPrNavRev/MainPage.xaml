@@ -4,10 +4,14 @@
              xmlns:local="clr-namespace:ColorPrNavRev"
              x:Class="ColorPrNavRev.MainPage">
 
-	<Label 
-           x:Name="welcomeLabel"
-	       Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+	<StackLayout VerticalOptions="CenterAndExpand" Spacing="16">
+        <Entry x:Name="userEntry" />
+        <StackLayout Orientation="Horizontal" HeightRequest="62"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Button x:Name="redButton" Text="Red" TextColor="White" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <Button x:Name="blueButton" Text="Blue" TextColor="White" BackgroundColor="Blue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <Button x:Name="greenButton" Text="Green" TextColor="White" BackgroundColor="Green" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+        <Label x:Name="resultString" />
+	</StackLayout>
 
 </ContentPage>

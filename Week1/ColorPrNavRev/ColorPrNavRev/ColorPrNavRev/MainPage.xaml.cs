@@ -15,7 +15,7 @@ namespace ColorPrNavRev
 		{
 			InitializeComponent();
 
-            welcomeLabel.TextColor = Color.Red;
+            
 		}
 	}
 }
