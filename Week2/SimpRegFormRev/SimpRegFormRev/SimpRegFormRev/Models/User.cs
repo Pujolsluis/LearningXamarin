@@ -11,7 +11,8 @@ namespace SimpRegFormRev.Models
         public String Email { get; set; }
         public String Password { get; set; }
         public String ConfirmPassword { get; set; }
-        public bool acceptTerms { get; set; }
+        public String AboutMe { get; set; }
+        public bool AcceptTerms { get; set; }
 
     }
 }

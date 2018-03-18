@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly:XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SimpRegFormRev
 {
 	public partial class App : Application
@@ -13,7 +15,7 @@ namespace SimpRegFormRev
 		{
 			InitializeComponent();
 
-			MainPage = new SimpRegFormRev.MainPage();
+			MainPage = new NavigationPage(new SimpRegFormRev.Views.RegisterPage());
 		}
 
 		protected override void OnStart ()

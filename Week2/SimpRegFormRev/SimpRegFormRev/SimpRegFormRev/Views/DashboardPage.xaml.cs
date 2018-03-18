@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SimpRegFormRev.ViewModels;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace SimpRegFormRev.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RegisterPage : ContentPage
+	public partial class DashboardPage : ContentPage
 	{
-		public RegisterPage ()
+		public DashboardPage ()
 		{
 			InitializeComponent ();
-		    BindingContext = new RegisterPageViewModel();
 		}
 	}
 }
