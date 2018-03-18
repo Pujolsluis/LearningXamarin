@@ -24,7 +24,24 @@ namespace SzIcAppRev.Views
 
 	    private void onButtonClick(object sender, EventArgs eventArgs)
 	    {
-	        throw new NotImplementedException();
+	        Button tempButton = (Button) sender;
+	        switch (tempButton.Text.ToLower())
+	        {
+                case "small":
+                    logoImage.Scale = 1;
+                    break;
+                case "medium":
+                    logoImage.Scale = 1.5;
+                    break;
+                case "large":
+                    logoImage.Scale = 2;
+                    break;
+                default:
+                    break;
+	        }
+	        {
+	                
+	        }
 	    }
 	}
 }
