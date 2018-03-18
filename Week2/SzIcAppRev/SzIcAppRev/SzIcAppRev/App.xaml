@@ -5,6 +5,16 @@
 	<Application.Resources>
 
 		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Color x:Key="darkButtonTextColor">White</Color>
+            
+            <Style x:Key="darkButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="TextColor" Value="WhiteSmoke" />
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+
 
 	</Application.Resources>
 </Application>

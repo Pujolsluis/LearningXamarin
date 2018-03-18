@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SzIcAppRev.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,9 @@ namespace SzIcAppRev.Views
 		public LoginPage ()
 		{
 			InitializeComponent ();
+		    BindingContext = new LoginPageViewModel();
+
+		    loginButton.Clicked += (sender, args) => { this.Navigation.PushAsync(new DashboardPage()); };
 		}
 	}
 }

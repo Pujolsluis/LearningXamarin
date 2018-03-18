@@ -6,5 +6,6 @@ namespace SzIcAppRev.ViewModels
 {
     class DashboardViewModel
     {
+
     }
 }

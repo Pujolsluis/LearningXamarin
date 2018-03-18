@@ -20,10 +20,13 @@
                    FontSize="24" />
             <Label Text="User"
                    Margin="0,24,0,0"/>
-            <Entry HorizontalOptions="FillAndExpand" />
+            <Entry HorizontalOptions="FillAndExpand"
+                   Text="{Binding Email}"/>
             <Label Text="Password" />
-            <Entry HorizontalOptions="FillAndExpand" />
-            <Button HorizontalOptions="FillAndExpand" 
+            <Entry HorizontalOptions="FillAndExpand"
+                   Text="{Binding Password}" IsPassword="True"/>
+            <Button x:Name="loginButton"
+                    HorizontalOptions="FillAndExpand" 
                     Text="Login"
                     TextColor="WhiteSmoke"
                     BackgroundColor="Black"
