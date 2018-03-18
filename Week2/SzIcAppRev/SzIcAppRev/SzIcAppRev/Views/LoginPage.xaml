@@ -30,7 +30,8 @@
                     Text="Login"
                     TextColor="WhiteSmoke"
                     BackgroundColor="Black"
-                    Margin="0,24,0,0"/>
+                    Margin="0,24,0,0"
+                    Command="{Binding login}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -16,8 +16,6 @@ namespace SzIcAppRev.Views
 		{
 			InitializeComponent ();
 		    BindingContext = new LoginPageViewModel();
-
-		    loginButton.Clicked += (sender, args) => { this.Navigation.PushAsync(new DashboardPage()); };
 		}
 	}
 }

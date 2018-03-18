@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Image HorizontalOptions="Center"
-                   WidthRequest="100" HeightRequest="100">
+                   WidthRequest="50" HeightRequest="50">
                 <Image.Source>
                     <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="Android">androidlogo.png</On>
@@ -17,12 +17,15 @@
             
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"
                          Orientation="Horizontal">
-                    <Button Style="{StaticResource darkButtonStyle}"
-                            Text="Small"/>
-                <Button Style="{StaticResource darkButtonStyle}"
-                            Text="Medium"/>
-                <Button Style="{StaticResource darkButtonStyle}"
-                            Text="Large"/>
+                <Button x:Name="smallButton"
+                    Style="{StaticResource darkButtonStyle}"
+                    Text="Small"/>
+                <Button x:Name="mediumButton"
+                    Style="{StaticResource darkButtonStyle}"
+                    Text="Medium"/>
+                <Button x:Name="largeButton"
+                    Style="{StaticResource darkButtonStyle}"
+                    Text="Large"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
