@@ -13,7 +13,7 @@ namespace FinalW2Rev
 		{
 			InitializeComponent();
 
-			MainPage = new FinalW2Rev.MainPage();
+			MainPage = new NavigationPage( new FinalW2Rev.Views.LoginPage());
 		}
 
 		protected override void OnStart ()
